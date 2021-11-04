@@ -14,8 +14,9 @@ public class Stock {
         double numberMaxdiff = 0.0;
         for(int u = 0; u<doubleList.size();u++){
             for(int k = u +1; k<doubleList.size();k++){
-                if(doubleList.get(k)-doubleList.get(u)>numberMaxdiff){
-                    numberMaxdiff = doubleList.get(k)-doubleList.get(u);
+                double diff = doubleList.get(k)-doubleList.get(u);
+                if(diff>numberMaxdiff){
+                    numberMaxdiff = diff;
                 }
             }
         }
