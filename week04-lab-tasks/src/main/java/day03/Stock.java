@@ -1,6 +1,5 @@
 package day03;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,19 +11,7 @@ public class Stock {
     }
 
     public double maxProfit(){
-        double numberMax = doubleList.get(0);
-        double numberMin = doubleList.get(0);
-        for(int i = 1; i<doubleList.size();i++){
-            if(doubleList.get(i)>numberMax){
-                numberMax = doubleList.get(i);
-            }else if(doubleList.get(i)<numberMin){
-                numberMin = doubleList.get(i);
-            }
-        }
-
-        double result = numberMax-numberMin;
-
-        double numberMaxdiff = 0;
+        double numberMaxdiff = 0.0;
         for(int u = 0; u<doubleList.size();u++){
             for(int k = u +1; k<doubleList.size();k++){
                 if(doubleList.get(k)-doubleList.get(u)>numberMaxdiff){
@@ -32,7 +19,6 @@ public class Stock {
                 }
             }
         }
-
         return numberMaxdiff;
     }
 
