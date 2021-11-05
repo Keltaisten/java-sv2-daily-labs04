@@ -12,14 +12,26 @@ public class Stock {
 
     public double maxProfit(){
         double numberMaxdiff = 0.0;
+        double firstN = 0.0;
+        double secondN = 0.0;
+        int steps = 0;
         for(int u = 0; u<doubleList.size();u++){
+            if(firstN > doubleList.get(u)){
+
             for(int k = u +1; k<doubleList.size();k++){
                 double diff = doubleList.get(k)-doubleList.get(u);
+                steps++;
                 if(diff>numberMaxdiff){
                     numberMaxdiff = diff;
                 }
             }
+
+            }
+            else{
+            firstN = doubleList.get(u);
+            }
         }
+        System.out.println(steps);
         return numberMaxdiff;
     }
 
