@@ -13,11 +13,5 @@ public class PlaneMain {
         System.out.println(plane.addPassanger(passanger4));
         PlaneMain planeMain = new PlaneMain();
         System.out.println(plane.numberOfPackages());
-
     }
-
-//    public int numberOfPackages(){
-//PlaneMain planeMain = new PlaneMain();
-//        return 1;
-//    }
 }
